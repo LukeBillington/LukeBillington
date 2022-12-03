@@ -1,23 +1,83 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  html,
-  body {
-    color: ${({ theme }) => theme.colors.primary};
-    padding: 0;
+  html, body, div, main, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, button, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend, input, textarea,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video,
+  ::before, ::after {
+
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+  }
+
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, main, menu, nav, section {
+    display: block;
+  }
+
+  html { font-size: 62.5%; }
+
+  body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: #000000;
+    font-family: "stevie-sans", "Helvetica Neue", sans-serif;
   }
 
   a {
-    color: inherit;
-    text-decoration: none;
+    color: #2687FB;
+    transition: color .2s;
   }
 
-  * {
-    box-sizing: border-box;
-  }
-`
+  a:hover { text-decoration: none !important; }
 
-export default GlobalStyle
+  a:active { color: #1E6CC9; }
+
+  h1 {
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -.2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+  }
+
+  ol, ul { list-style: none; }
+
+  blockquote, q { quotes: none; }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0
+  }
+`;
+
+export default GlobalStyle;
